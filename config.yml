@@ -1,0 +1,16 @@
+title: OldK
+description: Here you will be able to do things you want
+template:
+  repo: oldk-template
+  name: oldk
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
